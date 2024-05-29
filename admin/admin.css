@@ -1,0 +1,113 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #163a5f;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+header .userOption select {
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    background-color: white;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+}
+
+th {
+    background-color: #163a5f;
+    color: white;
+}
+
+a {
+    color: #163a5f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.stat {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat h3 {
+    margin: 0;
+    color: #163a5f;
+}
+
+.stat p {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #163a5f;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    bottom: 0;
+}

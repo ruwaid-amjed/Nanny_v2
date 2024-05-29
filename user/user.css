@@ -1,0 +1,386 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ header {
+     height: 100px;
+     background-color: transparent;
+     color: black;
+     display: flex;
+     direction: ltr;
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 1;
+     justify-content: space-between;
+     flex-direction: row;
+     transition: top 0.3s ease;
+     border-bottom: 1px solid #ccc;
+
+ }
+
+ .hidden-header {
+     top: -100px;
+     /* Adjust this value to the header's height */
+     visibility: hidden;
+     opacity: 0;
+     transition: visibility 0s 0.3s, opacity 0.3s ease, top 0.3s ease;
+ }
+
+
+ .logo {
+     width: 100px;
+     height: 100px;
+
+
+ }
+
+ .logo img {
+     width: auto;
+     height: 100%;
+ }
+
+ .userOption {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.contact-btn {
+    font-weight: bold;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    background-color: #163a5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0px;
+    cursor: pointer;
+    width: auto;
+}
+
+#userOptions {
+    font-size: 16px;
+    padding: 10px 20px; /* Match padding to button */
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #fff; /* White background for the dropdown */
+    color: #333; /* Dark grey color for the text */
+}
+
+#userOptions option {
+    background: #fff; /* White background for options */
+    font-weight: bold; /* Dark text for options */
+}
+
+#userOptions:hover {
+    border-color: #888; /* Darker border on hover */
+}
+
+#userOptions:focus {
+    outline: none;
+    border-color: #555; /* Focus color */
+}
+
+
+ .main {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     padding-top: 100px;
+     min-height: calc(100vh - 100px);
+     width: 100%;
+     height: auto;
+     box-sizing: border-box;
+ }
+
+
+
+ .filter-buttons {
+     display: flex;
+     justify-content: center;
+     padding: 15px;
+
+     height: 100px;
+     border-bottom: 1px solid #ccc;
+ }
+
+ .filter-button {
+     padding: 10px 30px;
+     margin: 5px;
+     border: none;
+     border-radius: 25px;
+     cursor: pointer;
+     background-color: #f5f9fc;
+     transition: background-color 0.3s ease;
+     color: #163a5f;
+     font-weight: bold;
+     font-size: 16px;
+ }
+
+ .filter-button i {
+     margin-right: 5px;
+ }
+
+
+ .filter-button:hover {
+     background-color: #ced4da;
+ }
+
+ .filter-button:focus {
+
+     background-color: #ced4da;
+ }
+
+ .more-filters {
+     color: #163a5f;
+     /* Different color for 'More filters' button */
+ }
+
+ /* Style for the select dropdown */
+#cityFilter {
+    padding: 10px 30px; /* Same padding as buttons */
+    margin: 5px; /* Same margin as buttons */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded corners like buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #f5f9fc; /* Same background as buttons */
+    color: #163a5f; /* Same text color as buttons */
+    font-weight: bold; /* Bold font weight */
+    font-size: 16px; /* Same font size as buttons */
+    outline: none; /* Remove outline */
+    -webkit-appearance: none; /* Remove default styling on WebKit browsers */
+    -moz-appearance: none; /* Remove default styling on Firefox */
+    appearance: none; /* Remove default styling */
+    position: relative; /* For positioning the custom arrow icon */
+}
+
+/* Custom arrow icon for the select dropdown */
+#cityFilter {
+    background-image: url('path_to_your_custom_arrow_down_icon.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position icon to the right, centered vertically */
+    background-size: 16px; /* Icon size */
+}
+
+#cityFilter:hover {
+    background-color: #ced4da; /* Hover effect similar to buttons */
+}
+
+
+
+
+ .txt {
+     justify-content: center;
+     display: flex;
+     flex-wrap: wrap;
+     padding: 10px;
+     border-radius: 25px;
+     margin: 30px 70px;
+     background-color: #f5f9fc;
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+ }
+
+ .txt p {
+     color: #163a5f;
+     /* color: #838383; */
+     margin: 20px 0px;
+     font-size: 20px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     padding: 10px;
+     line-height: 1.5;
+
+ }
+
+ /* #f7fafc; */
+
+
+ .card-container {
+     justify-content: center;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     padding: 20px;
+ }
+
+ .card {
+     background-color: #ebf3fa;
+     /* background: #f5f9fc; */
+     border-radius: 10px;
+     overflow: hidden;
+     display: flex;
+     width: 1000px;
+     height: 260px;
+ }
+
+ .card-image img {
+     width: 130px;
+     height: 130px;
+     margin-top: 20px;
+     border-radius: 50%;
+     margin-right: 10px;
+ }
+
+ .card-info {
+     padding-right: 10px;
+
+ }
+
+ .card-info h2 {
+     font-size: 30px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     margin-bottom: 10px;
+     margin-top: 30px;
+
+ }
+
+ .card-info p {
+     font-size: 20px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     color: black;
+
+
+
+ }
+
+ .card-details span {
+     display: block;
+     font-size: 0.9em;
+     color: black;
+     font-size: 23px;
+     padding-top: 10px;
+
+
+
+ }
+
+ .card-price {
+     font-size: 1.2em;
+     font-weight: bold;
+     color: black;
+     margin-right: 720px;
+
+ }
+
+ .ellipsis {
+     width: 500px;
+     /* عرض العنصر، يمكنك تعديله بحسب التصميم الخاص بك */
+     overflow: hidden;
+     /* يمنع النص من الخروج عن العنصر */
+     text-overflow: ellipsis;
+     /* يضيف نقاط الحذف... عندما يتم قطع النص */
+     display: -webkit-box;
+     -webkit-line-clamp: 2;
+     /* عدد الأسطر التي تريد عرضها قبل إظهار النقاط */
+     -webkit-box-orient: vertical;
+     line-height: 1.6;
+     /* ضبط ارتفاع السطر، مهم لحساب عدد الأسطر بدقة */
+ }
+
+ .card-content {
+     flex-grow: 1;
+     /* تضمن أن المحتوى يأخذ الحجم الكافي */
+ }
+
+ .card-arrow {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 24px;
+     /* حجم الأيقونة */
+     color: #163a5f;
+     /* color: #cbcbcb; */
+     /* لون السهم */
+     text-decoration: none;
+     /* إزالة تحت النص للرابط */
+ }
+
+ .card-arrow i {
+     transition: transform 0.3s ease;
+     /* تأثير حركة للسهم */
+     transform: rotate(180deg);
+     /* تدوير الأيقونة لتشير إلى اليسار */
+ }
+
+ footer {
+     margin: 0px;
+ }
+
+ .site-footer {
+
+     background-color: #0d2f4b;
+     /* A calming blue */
+     color: #fff;
+     padding: 32px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .footer-container {
+     text-align: center;
+ }
+
+ .footer-brand {
+     margin-bottom: 16px;
+     font-size: 32px;
+     font-weight: bold;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+ }
+
+ .social-icons {
+     margin-bottom: 16px;
+ }
+
+ .social-icon {
+     font-size: 24px;
+     margin: 0 10px;
+     padding: 8px;
+     border-radius: 50%;
+     background-color: #e9eaeb;
+     /* A slightly darker shade for contrast */
+     width: 45px;
+     height: 45px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     transition: background-color 0.3s, transform 0.3s;
+ }
+
+ .social-icon:hover {
+     background-color: #163a5f;
+     transform: scale(1.1);
+ }
+
+
+
+ .social-icon:before {
+     display: block;
+ }
+
+
+ .social-icon img {
+     width: 24px;
+     height: 24px;
+ }
+
+ .copywrite {
+     font-size: 14px;
+     opacity: 0.8;
+ }

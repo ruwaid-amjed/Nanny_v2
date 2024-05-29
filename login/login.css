@@ -1,0 +1,111 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('sitter.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-form-container {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    /* تعتيم خفيف للخلفية لتحسين قراءة النص */
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: auto;
+    /* تحديد عرض الفورم */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logo-container img {
+    width: 80%;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+    text-align: right;
+    direction: rtl;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+input {
+    width: 90%;
+    padding: 18px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+
+.toggle-password {
+    position: absolute;
+    left: 0;
+    top: 67px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+button {
+    width: 101%;
+    padding: 10px;
+    background-color: #163a5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0d2f4b;
+}
+
+.signup-links p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.signup-links a {
+    color: #163a5f;
+    text-decoration: none;
+}
+
+.signup-links a:hover {
+    color: #0d2f4b;
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    width: 90%; /* Adjust width to fit your form width */
+    margin: 10px auto;
+}
+
+.alert-danger {
+    color: #721c24; /* dark red */
+    background-color: #f8d7da; /* light red */
+    border-color: #f5c6cb; /* slightly darker light red */
+}
